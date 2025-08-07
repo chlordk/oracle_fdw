@@ -27,13 +27,11 @@
 #include "commands/defrem.h"
 /* for "explain" or "explain_state" */
 #if PG_VERSION_NUM >= 180000
+#include "commands/explain_format.h"
 #include "commands/explain_state.h"
 #include "executor/executor.h"
 #else
 #include "commands/explain.h"
-#endif  /* PG_VERSION_NUM */
-#if PG_VERSION_NUM >= 180000
-#include "commands/explain_format.h"
 #endif  /* PG_VERSION_NUM */
 #include "commands/vacuum.h"
 #include "foreign/fdwapi.h"
